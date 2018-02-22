@@ -6071,7 +6071,7 @@
     },
     "node-sass": {
       "version": "4.7.2",
-      "resolved": "https://registry.npmjs.org/node-sass/-/node-sass-4.7.2.tgz",
+      "resolved": "git://github.com/jhermsmeier/node-sass.git#a6fd82438611377331b042eac6958c534649859a",
       "dev": true,
       "dependencies": {
         "caseless": {
@@ -7129,6 +7129,11 @@
       "resolved": "https://registry.npmjs.org/sass-graph/-/sass-graph-2.2.4.tgz",
       "dev": true,
       "dependencies": {
+        "set-blocking": {
+          "version": "2.0.0",
+          "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
+          "dev": true
+        },
         "string-width": {
           "version": "1.0.2",
           "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
@@ -7137,14 +7142,7 @@
         "yargs": {
           "version": "7.1.0",
           "resolved": "https://registry.npmjs.org/yargs/-/yargs-7.1.0.tgz",
-          "dev": true,
-          "dependencies": {
-            "set-blocking": {
-              "version": "2.0.0",
-              "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
-              "dev": true
-            }
-          }
+          "dev": true
         },
         "yargs-parser": {
           "version": "5.0.0",
