@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.4.0 - 2018-03-27
+
+### Features
+
+- Display image size for comparison if drive is too small
+- Implement writing to multiple destinations simultaneously
+- Add colorised multi-writes progress status dots.
+- Replace Helvetica as the main font with Roboto.
+- Add drive multi-selection to the store.
+- Move CLI write preparation logic into SDK
+- Add spacing to the drive-selector warning/error labels.
+- Resolve JSX files
+- Separate SVG component's path and content attributes.
+- Warn the user on selection of large drives.
+- Make the drive-selector button orange on warnings.
+- Consolidate low-level components into Etcher SDK
+- Use native code to clean drives on Windows
+- Log the banner load event to analytics.
+- Increase UV_THREADPOOL_SIZE to allocate 4 threads per CPU
+- Replace template paths with template contents.
+- Add icon next to drive size when compatibility warnings exist.
+- Replace ng-show/hide with ng-if on main page.
+- Add `lib/gui/app` folder to ease into Webpack usage.
+
+### Fixes
+
+- Use correct usbboot blob path in AppImages.
+- Fix status dots to their position.
+- Make all `.label` tags' text bold and remove need for `<b>` tags.
+- Support building Etcher on armv8
+- Specify UTF-8 encoding with meta tag.
+
+### Misc
+
+- Use SVG contents list in main template.
+- Remove stale JSON object plainifying in store
+- Move memoize function to shared utils.
+- Add missing name param to verifyNoNilFields JSDoc example.
+- Remove stale `invalidKey` check in store.
+- Rename selection-state and store functions.
+- Remove unused robot protocol
+- Upgrade eslint to use object-curly-newline options.
+- Fix "Array buffer allocation failed" when flashing some .dmg images
+- Replace Lodash templates with arrow-functions.
+
 ## v1.3.1 - 2018-01-23
 
 ### Fixes
