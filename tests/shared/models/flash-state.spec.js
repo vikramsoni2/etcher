@@ -29,6 +29,10 @@ describe('Model: flashState', function () {
       it('should be able to reset the progress state', function () {
         flashState.setFlashingFlag()
         flashState.setProgressState({
+          flashing: 0,
+          verifying: 0,
+          succeeded: 0,
+          failed: 0,
           type: 'write',
           percentage: 50,
           eta: 15,
@@ -90,6 +94,10 @@ describe('Model: flashState', function () {
 
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             eta: 15,
@@ -102,6 +110,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 0,
             eta: 15,
@@ -114,6 +126,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             eta: 15,
             speed: 100000000000
@@ -125,6 +141,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: '50',
             eta: 15,
@@ -137,6 +157,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 101,
             eta: 15,
@@ -149,6 +173,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: -1,
             eta: 15,
@@ -161,6 +189,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             speed: 100000000000
@@ -172,6 +204,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             eta: 0,
@@ -184,6 +220,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             eta: '15',
@@ -196,6 +236,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             eta: 15
@@ -207,6 +251,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
         m.chai.expect(function () {
           flashState.setProgressState({
+            flashing: 2,
+            verifying: 0,
+            succeeded: 0,
+            failed: 0,
             type: 'write',
             percentage: 50,
             eta: 15,
@@ -218,6 +266,10 @@ describe('Model: flashState', function () {
       it('should floor the percentage number', function () {
         flashState.setFlashingFlag()
         flashState.setProgressState({
+          flashing: 2,
+          verifying: 0,
+          succeeded: 0,
+          failed: 0,
           type: 'write',
           percentage: 50.253559459485,
           eta: 15,
@@ -265,7 +317,8 @@ describe('Model: flashState', function () {
           failed: 0,
           percentage: 50,
           eta: 15,
-          speed: 0
+          speed: 0,
+          totalSpeed: 0
         }
 
         flashState.setFlashingFlag()
@@ -278,7 +331,8 @@ describe('Model: flashState', function () {
           failed: 0,
           percentage: 50,
           eta: 15,
-          speed: 0
+          speed: 0,
+          totalSpeed: 0
         })
       })
     })
@@ -366,6 +420,10 @@ describe('Model: flashState', function () {
         flashState.setFlashingFlag()
 
         flashState.setProgressState({
+          flashing: 2,
+          verifying: 0,
+          succeeded: 0,
+          failed: 0,
           type: 'write',
           percentage: 50,
           eta: 15,
@@ -373,7 +431,7 @@ describe('Model: flashState', function () {
         })
 
         m.chai.expect(flashState.getFlashState()).to.not.deep.equal({
-          flashing: 0,
+          flashing: 2,
           verifying: 0,
           succeeded: 0,
           failed: 0,
